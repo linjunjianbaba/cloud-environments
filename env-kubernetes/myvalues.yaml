@@ -840,7 +840,7 @@ docker-registry:
   persistence:
     StorageClass: "alicloud-disk-available"
     accessMode: 'ReadWriteOnce'
-    enabled: true
+    enabled: false
     size: 100Gi
 
 kubernetes-dashboard:
@@ -862,7 +862,7 @@ nexusServiceLink:
   externalName: ""
 
 chartmuseum:
-  enabled: true
+  enabled: false
   service:
     annotations:
       fabric8.io/expose: "true"

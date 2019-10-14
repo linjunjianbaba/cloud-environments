@@ -33,7 +33,7 @@ gcpreviews:
     - "--batch-mode"
   image:
     repository: gcr.azk8s.cn/jenkinsxio/builder-jx
-    tag: 2.0.851-206
+    tag: 2.0.861-218
   role:
     enabled: true
     rules:
@@ -208,7 +208,7 @@ gcactivities:
   - "--batch-mode"
   image:
     repository: gcr.azk8s.cn/jenkinsxio/builder-jx
-    tag: 2.0.851-206
+    tag: 2.0.861-218
   role:
     enabled: true
     rules:
@@ -298,7 +298,7 @@ gcpods:
   - "--batch-mode"
   image:
     repository: gcr.azk8s.cn/jenkinsxio/builder-jx
-    tag: 2.0.851-206
+    tag: 2.0.861-218
   role:
     enabled: true
     rules:
@@ -390,7 +390,7 @@ controllerworkflow:
   - "workflow"
   image:
     repository: gcr.azk8s.cn/jenkinsxio/builder-jx
-    tag: 2.0.851-206
+    tag: 2.0.861-218
   clusterrole:
     enabled: true
     rules:
@@ -460,7 +460,7 @@ controllerbuild:
   - "--verbose"
   image:
     repository: gcr.azk8s.cn/jenkinsxio/builder-go
-    tag: 2.0.851-206
+    tag: 2.0.861-218
   env:
     GIT_AUTHOR_NAME: "jenkins-x-bot"
     GIT_AUTHOR_EMAIL: "jenkins-x@googlegroups.com"
@@ -555,7 +555,7 @@ controllercommitstatus:
   - "--verbose"
   image:
     repository: gcr.azk8s.cn/jenkinsxio/builder-jx
-    tag: 2.0.851-206
+    tag: 2.0.861-218
   clusterrole:
     enabled: true
     rules:
@@ -632,7 +632,7 @@ controllerrole:
   - "role"
   image:
     repository: gcr.azk8s.cn/jenkinsxio/builder-jx
-    tag: 2.0.851-206
+    tag: 2.0.861-218
   clusterrole:
     enabled: true
     rules:
@@ -705,7 +705,7 @@ controllerteam:
   - "team"
   image:
     repository: gcr.azk8s.cn/jenkinsxio/builder-jx
-    tag: 2.0.851-206
+    tag: 2.0.861-218
   clusterrole:
     enabled: true
     rules:
@@ -1015,7 +1015,7 @@ jenkins:
     # global node properties
     Global:
       EnvVars:
-        DOCKER_REGISTRY: "harbor.xiaobu.vip"
+        DOCKER_REGISTRY: ""
         TILLER_NAMESPACE: ""
 
   Agent:

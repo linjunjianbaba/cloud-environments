@@ -199,7 +199,7 @@ gcpreviews:
 
 gcactivities:
   serviceaccount:
-    enabled: true
+    enabled: false
   cronjob:
     enabled: true
     schedule: "0/30 */3 * * *"
@@ -839,6 +839,7 @@ docker-registry:
       fabric8.io/expose: "true"
       fabric8.io/ingress.annotations: "kubernetes.io/ingress.class: nginx\nnginx.ingress.kubernetes.io/proxy-body-size: 2g"
   persistence:
+    StorageClass: "alicloud-disk-available"
     accessMode: 'ReadWriteOnce'
     enabled: true
     size: 100Gi
@@ -849,7 +850,7 @@ kubernetes-dashboard:
     fabric8.io/ingress.annotations: "kubernetes.io/ingress.class: nginx\nnginx.ingress.kubernetes.io/auth-type: basic\nnginx.ingress.kubernetes.io/auth-secret: jx-basic-auth"
 
 nexus:
-  enabled: false
+  enabled: true
   service:
     annotations:
       fabric8.io/expose: "true"
@@ -1061,7 +1062,7 @@ jenkins:
           MAVEN_OPTS: -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn
 
         ServiceAccount: jenkins
-        # Node labels and tolerations for pod assignment
+        #  labels and tolerations for pod assignment
         # ref: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/#nodeselector
         # ref: https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/
         # NodeSelector:
@@ -1171,7 +1172,7 @@ jenkins:
             RequestMemory: "128Mi"
             Args: '${computer.jnlpmac} ${computer.name}'
           Nodejs:
-            Image: k8sz/node:1.0.0
+            Image: k8sz/node:1.0.2
             Privileged: true
             RequestCpu: "400m"
             RequestMemory: "512Mi"

@@ -199,7 +199,7 @@ gcpreviews:
 
 gcactivities:
   serviceaccount:
-    enabled: false
+    enabled: true
   cronjob:
     enabled: true
     schedule: "0/30 */3 * * *"
@@ -850,7 +850,7 @@ kubernetes-dashboard:
     fabric8.io/ingress.annotations: "kubernetes.io/ingress.class: nginx\nnginx.ingress.kubernetes.io/auth-type: basic\nnginx.ingress.kubernetes.io/auth-secret: jx-basic-auth"
 
 nexus:
-  enabled: true
+  enabled: false
   service:
     annotations:
       fabric8.io/expose: "true"
@@ -1079,7 +1079,7 @@ jenkins:
             RequestMemory: "128Mi"
             Args: '${computer.jnlpmac} ${computer.name}'
           Maven:
-            Image: gcr.azk8s.cn/jenkinsxio/builder-maven:2.0.1005-335
+            Image: k8sz/maven:1.0.8
             Privileged: true
             RequestCpu: "400m"
             RequestMemory: "512Mi"

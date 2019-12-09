@@ -1079,7 +1079,7 @@ jenkins:
             RequestMemory: "128Mi"
             Args: '${computer.jnlpmac} ${computer.name}'
           Maven:
-            Image: k8sz/maven:1.0.8
+            Image: k8sz/maven:2.0.3
             Privileged: true
             RequestCpu: "400m"
             RequestMemory: "512Mi"
@@ -1172,7 +1172,7 @@ jenkins:
             RequestMemory: "128Mi"
             Args: '${computer.jnlpmac} ${computer.name}'
           Nodejs:
-            Image: k8sz/node:1.0.2
+            Image: k8sz/node:1.0.10
             Privileged: true
             RequestCpu: "400m"
             RequestMemory: "512Mi"

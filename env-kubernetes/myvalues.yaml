@@ -833,7 +833,7 @@ pipelinecontroller:
   enabled: true
 
 docker-registry:
-  enabled: true
+  enabled: false
   service:
     annotations:
       fabric8.io/expose: "true"
